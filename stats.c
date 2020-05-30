@@ -9,13 +9,18 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <stats.c> 
+ * @brief <to print statstics >
+ * 
+ *  this file will print statstics mentioned below of given array of data
+    - Max
+    - Min
+    - Mean
+    - Meadian
+    - description & declaraion of function is in stats.h header file
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Kaushal Dekivadia>
+ * @date <30-05-2020>
  *
  */
 
@@ -35,9 +40,15 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
 
+  printf("Elements(Data) of given array is listed below\n");
+  print_array(test, SIZE);
+  printf("sorted array :\n");
+  sort_Array(test, SIZE);
+  print_array(test, SIZE);
+  printf("Statstics of given array :\n")
+  print_statstics(test, SIZE);
+ 
 }
 
 /* Add other Implementation File Code Here */
