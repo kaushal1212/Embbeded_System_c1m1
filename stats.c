@@ -43,12 +43,73 @@ void main() {
 
   printf("Elements(Data) of given array is listed below\n");
   print_array(test, SIZE);
-  printf("sorted array :\n");
-  sort_Array(test, SIZE);
+  printf("\n\nsorted array :\n");
+  sort_array(test, SIZE);
   print_array(test, SIZE);
-  printf("Statstics of given array :\n")
+  printf("\n\nStatstics of given array :\n");
   print_statstics(test, SIZE);
  
 }
 
 /* Add other Implementation File Code Here */
+void print_array(unsigned char *array, unsigned int length)
+{
+  for(int i=0;i<length;i++)
+  {
+    printf(" %d\t",array[i]);
+  }
+}
+
+void sort_array(unsigned char *array, unsigned int length)
+{
+  for(int i=0;i<length;i++)
+  {
+    for( int j=i;j<length;j++)
+    {
+      if(array[j]>array[i])
+      {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+    }
+  }
+}
+
+unsigned char find_mean(unsigned char *array, unsigned int length)
+{
+  unsigned int sum = 0;
+  for(int i=0; i<length; i++)
+  {
+    sum += array[i];
+  }
+
+  return (sum/length);
+}
+
+unsigned char find_median(unsigned char *array, unsigned int length)
+{
+  if(length%2 == 0)
+     return  ((array[length/2]) + (array[(length+1)/2]))/2;
+   else
+    return (array[length+1/2]);
+}
+
+unsigned char find_maximum(unsigned char *array, unsigned int length)
+{
+    return array[0];
+}
+
+unsigned char find_minimum(unsigned char *array, unsigned int length)
+{
+  return array[length-1];
+}
+
+void print_statstics( unsigned char *array, unsigned int length)
+{
+  printf("mean = %d",find_mean(array,length) );
+  printf("\nmedian = %d",find_median(array,length) );
+  printf("\nMaximum data = %d",find_maximum(array,length) );
+  printf("\nMinmum data = %d\n",find_minimum(array,length) );
+
+}
