@@ -97,5 +97,11 @@ unsigned char find_max(unsigned char array[], unsigned int length);
  */
 void sort_array(unsigned char array[], unsigned int length);
 
+/* 
+ * dummy function
+ * */
+
+void dummy_function();
+
 
 #endif /* __STATS_H__ */
