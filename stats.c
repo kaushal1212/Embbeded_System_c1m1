@@ -113,3 +113,7 @@ void print_statstics( unsigned char *array, unsigned int length)
   printf("\nMinmum data = %d\n",find_minimum(array,length) );
 
 }
+
+void dummy_function(){
+   printf("Hello world")
+}
